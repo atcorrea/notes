@@ -4,6 +4,7 @@
 ```
 
 # **notas:**
++ Ideal para armazenamento de dados não estruturados.
 + Dentro do MongoDB, os arquivos são armazenados em formato BSON.
 + Utilizando **.pretty()** no final da query, o JSON vem identado no console.
 
@@ -96,5 +97,23 @@ db.albuns.update({"nome":"Among the Living"},{$set : {"produtor":"Tony Ganza"}})
 db.albuns.update({},{$unset : {"nome_artista":true, "artista_id":true}}) 
 ```
 ----
+## **Bons Exemplos**
+```js
+1.
+artistas.forEach(x => {
+  print("atualizando albuns de " + x["nome"]);
+  var result = db.albuns.update(
+    { "artista.nome": x["nome"] },
+    {
+      $unset: { artista: true },
+      $set: { artista_id: x["_id"], nome_artista: x["nome"] }
+    },
+    { multi: true }
+  );
+  print(result);
+});
+
+```
+
 ## **referências:**
 + [**NoSQL:** Como armazenar os dados de uma aplicação moderna - Casa do código](https://www.casadocodigo.com.br/products/livro-nosql)
