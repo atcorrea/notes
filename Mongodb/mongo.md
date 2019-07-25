@@ -12,10 +12,10 @@
 |Comando                         |  Função   |
 |--------------------------------|-----------|
 | .insert({json})                | incluir novo registro |
-| .find({json})                  | encontrar registro(s) |
+| [.find({json})](##find())      | encontrar registro(s) |
 | .findOne({json})               | traz o primeiro registro que satisfaz a condição |
 | .remove({json})                | remove um registro |
-| .update({json}, [new values])  | atualiza um registro |
+| [.update({json}, [new values])](##update())  | atualiza um registro |
 | .count({})                     | contagem de todos os registros que satisfazem uma condição |
 
 -----
@@ -61,7 +61,7 @@ db.[COLLECTION_NAME].find({"[CAMPO]": {["CAMPO_INTERNO"] : [valor]}})
 Em objetos aninhados (embedded documents), é preciso utilizar uma busca aninhanda (obj dentro de obj), para obter o resultado desejado.
 
 -----
-## **.update()**
+## .update()
 update **modifica o objeto completo** (troca um objeto json por outro, mantendo apenas o ID) isso pode resultar em perda de informações (sintaxe pura não atualiza campos).
 
 para atualizar apenas o campo, utilizar o operador **$set**
