@@ -60,6 +60,21 @@ db.[COLLECTION_NAME].find({"[CAMPO]": {["CAMPO_INTERNO"] : [valor]}})
 
 Em objetos aninhados (embedded documents), é preciso utilizar uma busca aninhanda (obj dentro de obj), para obter o resultado desejado.
 
+**Exemplos**
+```js
+//busca por ID
+db.albuns.find({"_id": new ObjectId("5d3712041383fd82610359d3")})
+
+//busca com duas condições (and)
+db.albuns.find({$and: [
+{"dataLancamento": {$gte: new Date(1986, 0 , 1)}},
+{"dataLancamento": {$lt: new Date(1987, 0, 1)}}
+]})
+
+//busca aninhada
+db.albuns.find({"artista":{"nome":"Blind Guardian"}}).pretty()
+
+```
 -----
 ## .update()
 update **modifica o objeto completo** (troca um objeto json por outro, mantendo apenas o ID) isso pode resultar em perda de informações (sintaxe pura não atualiza campos).
@@ -71,27 +86,14 @@ o operador **$unset** serve para **remover** campos.
 Por default, **update sempre atualiza apenas 1 registro**, para atualizar mais de um doc, deve-se passar um terceiro argumento, um booleano, ex: 
 
     db.colecao.update({BUSCA}, {ATUALIZACAO},{multi : true}).
------
 
-## **Good Examples:**
+**Exemplos**
 ```js
-//busca por ID
-db.albuns.find({"_id": new ObjectId("5d3712041383fd82610359d3")})
-
-//busca com duas condições (and)
-db.albuns.find({$and: [
-{"dataLancamento": {$gte: new Date(1986, 0 , 1)}},
-{"dataLancamento": {$lt: new Date(1987, 0, 1)}}
-]})
-
 //update de valor de um campo
 db.albuns.update({"nome":"Among the Living"},{$set : {"produtor":"Tony Ganza"}}) 
 
 //removendo campos do documento
 db.albuns.update({},{$unset : {"nome_artista":true, "artista_id":true}}) 
-
-//busca aninhada
-db.albuns.find({"artista":{"nome":"Blind Guardian"}}).pretty()
 ```
 ----
 ## **referências:**
