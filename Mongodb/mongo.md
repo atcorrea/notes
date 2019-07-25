@@ -12,10 +12,10 @@
 |Comando                         |  Função   |
 |--------------------------------|-----------|
 | .insert({json})                | incluir novo registro |
-| [.find({json})](##find())      | encontrar registro(s) |
+| [.find({json})](#find)      | encontrar registro(s) |
 | .findOne({json})               | traz o primeiro registro que satisfaz a condição |
 | .remove({json})                | remove um registro |
-| [.update({json}, [new values])](##update())  | atualiza um registro |
+| [.update({json}, [new values])](#update)  | atualiza um registro |
 | .count({})                     | contagem de todos os registros que satisfazem uma condição |
 
 -----
