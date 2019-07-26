@@ -4,7 +4,9 @@
 ```
 
 # **notas:**
++ https://www.mongodb.com/
 + Ideal para armazenamento de dados não estruturados.
++ Utiliza JS para scripts
 + Dentro do MongoDB, os arquivos são armazenados em formato BSON.
 + Utilizando **.pretty()** no final da query, o JSON vem identado no console.
 

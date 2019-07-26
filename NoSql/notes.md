@@ -5,6 +5,3 @@
   + Redis
   + Memcached
   + [Riak](#riak)
-
-## Riak
-+ Alta disponibilidade
