@@ -35,13 +35,21 @@ def admin_greeting(name):
 
 Jinga2 Framework
 
+The Jinga2 template engine uses the following delimiters for escaping from HTML.
+
++ {% ... %} for Statements
++ {{ ... }} for Expressions to print to the template output
++ {# ... #} for Comments not included in the template output
++ \# ... ## for Line Statements
+
 **.py File**
 ```python
 from flask import Flask, render_template
 
-@app.route('route')
-def hello_view(param):
-    return render_template('filename.html', name = param)
+@app.route('/result')
+def result():
+   dict = {'phy':50,'che':60,'maths':70}
+   return render_template('result.html', result = dict)
 ```
 **HTML File**
 ```HTML
@@ -52,6 +60,20 @@ def hello_view(param):
 </head>
 <body>
     <h1>Hello {{ name }}!</h1>
+    {% if result[phy] > 50 %}
+         <h2> Your result is pass!</h2>
+    {% else %}
+         <h2>Your result is fail</h2>
+    {% endif %}
+
+    <table border = 1>
+    {% for key, value in result.iteritems() %}
+       <tr>
+          <th> {{ key }} </th>
+          <td> {{ value }} </td>
+       </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>
 ```
@@ -86,5 +108,21 @@ def admin_greeting():
 @app.route('/hello/user/<name>')
 def user_greeting(name):
     return "hello " + name
+```
+
+## Linking a static file (js, css, etc.)
+**static/main.js**
+```js
+function hello()
+{
+    alert("hello");
+}
+```
+**hello.html**
+```html
+<script type="text/javascript" src="{{ url_for('static', filename='main.js')}}"></script>
+
+<!--Button -->
+<button onclick="hello()">APERTE</button>
 ```
 
