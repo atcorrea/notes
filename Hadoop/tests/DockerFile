@@ -1,0 +1,7 @@
+FROM cloudera/quickstart
+WORKDIR /data
+
+COPY  ./csv_files .
+
+WORKDIR /usr/bin/
+CMD ["docker-quickstart"]

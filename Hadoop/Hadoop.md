@@ -4,8 +4,7 @@ Família de projetos realcionados a uma infraestrutura de computação distribu�
 
 **Rodar imagem docker:**
 ```
-docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 80:80 -p 50070 cloudera/quickstart usr/bin/docker-qui
-ckstart
+docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 80:80 -p 50070 cloudera/quickstart usr/bin/docker-quickstart
 ```
 
 ## HDFS
@@ -65,7 +64,8 @@ ckstart
 
 ## Hbase
 ### Banco de Dados (não relacional)
-- Apache Hbase, é um banco de Dados não relacionais, projetado para trabalhar com grande conjunto de dados (Big Data). É o banco de dados oficial do hadoop.
+- Apache Hbase, é um banco de Dados não relacionais (noSQL), projetado para trabalhar com grande conjunto de dados (Big Data). É o banco de dados oficial do hadoop.
+- Chave-Valor (?)
 -----
 
 ## Kafka
