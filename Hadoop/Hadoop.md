@@ -3,8 +3,13 @@
 Família de projetos realcionados a uma infraestrutura de computação distribuída para processamento de dados em larga escala.
 
 **Rodar imagem docker:**
+**without docker img:**
 ```
 docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 80:80 -p 50070 cloudera/quickstart usr/bin/docker-quickstart
+```
+**with docker img:**
+```
+docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 80:80 -p 50070 atcorrea/hadooptests
 ```
 
 ## HDFS
@@ -97,4 +102,4 @@ docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -
 # Dúvidas:
 1. Consigo usar spark sem hadoop?
 2. Aceita apenas dados estruturados?
-3. 
+3. HBase é um banco chave valor?
