@@ -1,23 +1,42 @@
 # AWS - Amazon Web Services
-- AZ = Availability Zone
-- 
 > Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon. It provides a mix of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings.
+- AZ = Availability Zone
 
-## > RDS
+## > RDS (Amazon Relational Database Service)
+> AWS provides managed database services through its Amazon Relational Database Service, which includes options for Oracle, SQL Server, PostgreSQL, MySQL, MariaDB and a proprietary high-performance database called Amazon Aurora.
+- **Serviço de gerenciamento e hospedagem de bancos relacionais dentro da estrutura AWS**
+- Aurora foi desenvolvido para ser compatível com MySQL e Postgre
+- Garante escalabilidade e disponibilidade dos banco de dados, automatizando diversas atividades de gerenciamento como:
+  - Recuperação;
+  - Backups;
+  - Recuperação;
+  - Criptografia de dados;
+  - Segurança;
+  - Monitoramento;
 
 ## > EMR
 
-## > Dynamo
+## > DynamoDB
+
+## > Amazon Neptune
+- Banco de dados de grafo
 
 ## > SQS
 
 ## > Kinesis
 
-## > Lambda ****
+## > AWS Lambda 
+- Serviço **Serverless** da AWS (Functions as a service)
+> AWS Lambda is an event-driven computing cloud service from Amazon Web Services that allows developers to program functions on a pay-per-use basis without having to provision storage or compute resources to support them.
+- Responde a eventos como upload para AWS S3, updates no DynamoTB, Kinesis streams, requests HTTP, etc.
+  - Basicamente, é possível criar um método que é executado somente quando um evento é disparado. Com isso, é possível, por exemplo, criar uma Web API que responde a chamadas HTTP, sem precisar configurar nada além do método e a lambda.
+  - Você paga apenas pelo tempo de processamento das funções.
+- Suporta linguagens como Node.js, Python, Java e C#.
+
 
 ## > S3 (Amazon Simple Storage Service)
 > Amazon Simple Storage Service (Amazon S3) is a scalable, high-speed, web-based cloud storage service designed for online backup and archiving of data and applications on Amazon Web Services. Amazon S3 was designed with a minimal feature set and created to make web-scale computing easier for developers.
-- Armazenamento de objetos
+- Armazenamento de objetos.
 - Organizado com **buckets**, que é como se fosse uma "pasta", cada bucket deve ter um **nome único** entre todos os usuários.
 - **Amazon Glacier:** Backup de dados
 - Pode ser acessado por interface web, SDK ou CLI.
@@ -36,8 +55,9 @@
 - Máquinas podem possuir IP fixo
 - Dentro de seu marketplace, oferece uma game de diferentes soluções.
 - Para acessar um servidor unix remotamente a partir do linux, existe uma ferramenta chamada **PuTTy**
+- Existe um serviço: EC2 Container Service que permite que os usuários trabalhem com containers docker
 
-## > IAM
+## > IAM (Identity and Access Management)
 - Gestão de usuários da conta AWS
 
 ## Referências:
