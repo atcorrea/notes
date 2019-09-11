@@ -4,4 +4,4 @@
 + **Chave-Valor:**
   + Redis
   + Memcached
-  + [Riak](#riak)
+  + [Riak](./KeyValue/riak.md)
