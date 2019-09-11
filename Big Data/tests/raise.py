@@ -1,4 +1,5 @@
 # Esse arquivo deve ser redodado dentro do container com pyspark instalado.
+# não esquecer de utilizar hdfs dfs -put ./monthly_salary_brazil.csv /user/root/ para copiar o CSV!
 
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext, Row
