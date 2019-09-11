@@ -9,3 +9,8 @@ with open('example.csv') as csvfile:
         print(row[0])
         print(row[0],row[1],row[2],)
 ```
+
+## Exibindo os métodos de um módulo (?)
+```python
+print(dir(<type>))
+```

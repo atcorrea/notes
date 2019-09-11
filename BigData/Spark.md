@@ -63,6 +63,10 @@ variavel = sqlContext.createDataFrame(collection)
 ```
 spark-submit <arquivo.py>
 ```
+- particiona um RDD em n partes:
+```
+RDD.repartition(n)
+```
 -----
 
 ### **Tips:**
