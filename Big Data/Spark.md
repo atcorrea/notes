@@ -75,3 +75,9 @@ spark-submit <arquivo.py>
            .set("spark.executor.memory", "1g"))
     sc = SparkContext(conf = conf)
 ```
+- Ler arquivo CSV no pySpark:
+```python
+# Retorna um DDD com os valores separados por ','
+sc.textFile("file.csv") 
+    .map(lambda line: line.split(","))
+```

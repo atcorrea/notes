@@ -2,7 +2,7 @@
 
 Família de projetos realcionados a uma infraestrutura de computação distribuída para processamento de dados em larga escala.
 
-**Rodar imagem docker:**
+**Rodar imagem docker (cloudera-quickstart):**
 **without docker img:**
 ```
 docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -p 80:80 -p 50070 cloudera/quickstart usr/bin/docker-quickstart
