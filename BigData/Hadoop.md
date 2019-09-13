@@ -88,3 +88,9 @@ docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888:8888 -
 ## Hue
 ### Hadoop UI
 - Interface gráfica
+
+## Referências:
+- https://www.cetax.com.br/apache-hadoop-tudo-o-que-voce-precisa-saber/
+- [VÍDEO: O que é Hadoop?](https://www.youtube.com/watch?v=qX5edsUWadE)
+- [VÍDEO: O que é Hadoop - HDFS](https://www.youtube.com/watch?v=HiM8ALNEDPM)
+- [VÍDEO: Entenda de uma vez por todas o que é MapReduce - O que é Hadoop?](https://www.youtube.com/watch?v=rISmbGoO-cM)

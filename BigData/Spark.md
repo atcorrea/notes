@@ -85,3 +85,9 @@ RDD.repartition(n)
 sc.textFile("file.csv") 
     .map(lambda line: line.split(","))
 ```
+
+## Referências:
+- [The 5-Minute Guide to Understanding the Significance of Apache Spark](https://mapr.com/blog/5-minute-guide-understanding-significance-apache-spark/)
+- [A Neanderthal’s Guide to Apache Spark in Python](https://towardsdatascience.com/a-neanderthals-guide-to-apache-spark-in-python-9ef1f156d427)
+- [PySpark Documentation](https://spark.apache.org/docs/0.9.0/api/pyspark/index.html)
+- [Examples | Spark](https://spark.apache.org/examples.html)
