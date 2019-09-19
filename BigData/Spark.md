@@ -59,6 +59,10 @@ spark-submit --master yarn <arquivo>
   - **--executor-cores**: número de cores para cada executor
   - **--master**: define o ip do master para execução
   - **--executor-memory**: memória alocada para o processo dentro de cada executor
+  - **Exemplo Comando:**
+  ```
+  time spark-submit --master yarn --num-executors 3 --executor-cores 1 raise.py
+  ```
 
 #### **Comandos pySpark**
 - Cria um RDD:
