@@ -5,9 +5,7 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext, Row
 
 conf = (SparkConf()
-        .setMaster('local')
         .setAppName('app')
-        .set('spark.executor.memory', '1g')
         )
 sc = SparkContext(conf=conf)
 

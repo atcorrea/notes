@@ -41,12 +41,26 @@
   > An Action is any RDD operation that does not produce an RDD as an output. Some examples of common Actions are doing a count of the data, or finding the max or min, or returning the first element of an RDD, etc.
   > Actions are RDD operations that produce non-RDD values. They materialize a value in a Spark program.
 
-
 ### **Comandos:**
-- Executar Spark:
+- Executar pySpark:
 ```
-pyspark --master local
+pyspark
 ```
+- Executar um script python:
+```
+spark-submit <arquivo.py>
+```
+- Executar cluster utilizando [**YARN**](./Hadoop.md#yarn)
+```
+spark-submit --master yarn <arquivo>
+```
+- **flags spark-submit:**
+  - **--num-executors**: define o número de execures para o processo
+  - **--executor-cores**: número de cores para cada executor
+  - **--master**: define o ip do master para execução
+  - **--executor-memory**: memória alocada para o processo dentro de cada executor
+
+#### **Comandos pySpark**
 - Cria um RDD:
 ```
 variavel = sc.parallelize(list)
@@ -58,10 +72,6 @@ variavel.collect()
 - Cria um DataFrame:
 ```
 variavel = sqlContext.createDataFrame(collection)
-```
-- Executar um script python:
-```
-spark-submit <arquivo.py>
 ```
 - particiona um RDD em n partes:
 ```
@@ -85,6 +95,7 @@ RDD.repartition(n)
 sc.textFile("file.csv") 
     .map(lambda line: line.split(","))
 ```
+- **Nem sempre paralelizar mais (aumentar número de executores ou particionar mais os rdds) vai reduzir o tempo de processamento!** É preciso considerar que a comunicação entre as máquinas (rede) pode aumentar o tempo de processamento, além disso, só a coordenação dos executores pode acabar aumentando o processo mais do que o necessário!
 
 ## Referências:
 - [The 5-Minute Guide to Understanding the Significance of Apache Spark](https://mapr.com/blog/5-minute-guide-understanding-significance-apache-spark/)
