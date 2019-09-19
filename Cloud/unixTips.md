@@ -13,3 +13,9 @@ faz o download de um arquio (solicitação get)
 wget <url>
 ```
 
+## **SSH**
+inicia uma conexão remota por protocolo SSH
+#### Exemplo:
+```
+ssh -i <caminho do arquivo .pem> <url do servidor>
+```
