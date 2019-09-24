@@ -14,3 +14,18 @@ with open('example.csv') as csvfile:
 ```python
 print(dir(<type>))
 ```
+
+## Trabalhando com datas:
+```python
+import datetime
+datetimeObj = datetime.datetime.strptime(dateStr, '%d-%m-%Y')
+
+year = datetimeObj.year
+month = datetimeObj.month
+day = datetimeObj.day
+```
+
+## Usando List Comprehentions
+```python
+[ x[0].replace('data_', '').upper() for x in tables ]
+```
