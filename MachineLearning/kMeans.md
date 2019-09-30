@@ -8,6 +8,7 @@
 - Defina um ***target K***, um número de grupos onde podem se agrupar as informações em um gráfico.
   - Normalmente a área de negócio que define o número de categorias (K)
   - É possível prever o número ótimo de K utilizando o ***elbow method***
+  > You must also look at the computation cost while deciding the number of clusters. If we increase the number of clusters, the computation cost will also increase. So, if you do not have high computational resources, my advice is to choose a lesser number of clusters.
 - Dentro do gráfico, cada K se torna uma **centroid** que é um ponto imaginário.
   - Centroids podem ser alocados randomicamente no gráfico ou podem ser inseridos 'a olho'
 - O algorítmo mede a distância (normalmente ***euclidiana***) dos pontos do gráfico até a centroid, e ao analizar todos, tira uma distância média, isso conclui uma iteração. O algorítmo roda ***n*** iterações até a centroid estar localizada no centro do que se entende como um grupo daquelas informações.
