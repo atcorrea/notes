@@ -14,6 +14,10 @@ with open('example.csv') as csvfile:
 ```python
 print(dir(<type>))
 ```
+## Exibindo informações sobre uma função ou classe
+```python
+help(<func>)
+```
 
 ## Trabalhando com datas:
 ```python
