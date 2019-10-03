@@ -27,10 +27,22 @@
 - Exemplo:
 ```python
 from sklearn.linear_model import LinearRegression
+from pandas import pd
+from matplotlib import pyplot as plt
+
+data = pd.read_csv('Salary_data.csv')
+x = data.iloc[:, 0].values
+y = data.iloc[:, 1].values
+
 regressor = LinearRegression()
 regressor.fit(x, y)
 
 y_pred = regressor.predict(X_test)
+
+plt.scatter(x,y,color='red')
+plt.plot(x,regressor.predict(x), color='blue')
+plt.show()
+
 ```
     
 ### Referências:
