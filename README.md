@@ -14,9 +14,14 @@ Em contanste evolução.
 - [Spark](./BigData/Spark.md)
 - [Run Time Complexity (big O)](./BigData/runTimeComplexity.md)
 
+## Machine Learning
+- [K-Means](./MachineLearning/kMeans.md)
+- [Linear Regression](./MachineLearning/linear_regression.md)
+
 ## Python
-- [Python](./python/python.md)
+- [Python Tips](./python/python.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
 - [AWS](./Cloud/aws.md)
+- [S3](./Cloud/s3.md)
