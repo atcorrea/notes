@@ -20,6 +20,9 @@ Em contanste evolução.
 
 ## Python
 - [Python Tips](./python/python_notes.md)
+- [Lists](./python/lists.md)
+- [Dictionaries](./python/dictionaries.md)
+- [Strings](./python/strings.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
