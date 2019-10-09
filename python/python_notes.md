@@ -33,9 +33,17 @@ day = datetimeObj.day
 ```python
  a // b
 ```
+- para alterar uma variável global dentro de uma função, utilize o modificador **global**
+- para acessar uma variável num bloco acima do que você está agora (parent) use o modificador **nonlocal**
+- Para documentar um método utilize 
+```python
+def add(num1, num2):
+    """ adiciona dois números """
+    return num1 + num2
+```
 
 ## Falsy objects:
-Os objetos 
+Os objetos que são interpretados como **False** pelo compilador
 - 0
 - None
 - ""

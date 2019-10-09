@@ -1,3 +1,5 @@
+# Dicionários
+
 ## Métodos
 - **.pop(key)** : remove um item baseado na sua chave. Retorna o **valor** removido.
 - **.popitem()** : remove um item aleatoriamente do dicionário.
