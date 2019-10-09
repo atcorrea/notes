@@ -22,7 +22,10 @@ Em contanste evolução.
 - [Python Tips](./python/python_notes.md)
 - [Lists](./python/lists.md)
 - [Dictionaries](./python/dictionaries.md)
+- [Sets](./python/sets.md)
+- [Tuples](./python/tuples.md)
 - [Strings](./python/strings.md)
+- [Functions](./python/functions.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
