@@ -10,7 +10,7 @@ with open('example.csv') as csvfile:
         print(row[0],row[1],row[2],)
 ```
 
-## Exibindo os métodos de um módulo (?)
+## Exibindo os membros de um tipo
 ```python
 print(dir(<type>))
 ```
@@ -18,7 +18,6 @@ print(dir(<type>))
 ```python
 help(<func>)
 ```
-
 ## Trabalhando com datas:
 ```python
 import datetime
@@ -29,7 +28,15 @@ month = datetimeObj.month
 day = datetimeObj.day
 ```
 
-## Usando List Comprehentions
+## Variados:
+- Divisão com resultado inteiro (arredondado para baixo)
 ```python
-[ x[0].replace('data_', '').upper() for x in tables ]
+ a // b
 ```
+
+## Falsy objects:
+Os objetos 
+- 0
+- None
+- ""
+- []

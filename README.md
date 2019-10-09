@@ -19,7 +19,7 @@ Em contanste evolução.
 - [Linear Regression](./MachineLearning/linear_regression.md)
 
 ## Python
-- [Python Tips](./python/python.md)
+- [Python Tips](./python/python_notes.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
