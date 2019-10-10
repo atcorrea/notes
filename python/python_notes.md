@@ -48,3 +48,20 @@ Os objetos que são interpretados como **False** pelo compilador
 - None
 - ""
 - []
+
+## Debugging
+debugando na linha de comando
+**comandos**
+- **l** : mostra aonde você está no código
+- **variavel** : exibe o valor da variável
+- **n** : próxima linha
+- **c** : despausa o programa
+- **q** : para a execução
+
+```python
+import pdb
+first = "First"
+second = "Second"
+pdb.set_trace()
+result = first + second
+```

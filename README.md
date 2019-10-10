@@ -28,6 +28,7 @@ Em contanste evolução.
 - [Functions](./python/functions.md)
 - [Built-in Functions](./python/built-in_functions.md)
 - [Lambdas](./python/lambdas.md)
+- [Exceptions](./python/exceptions.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
