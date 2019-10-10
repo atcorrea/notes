@@ -65,3 +65,10 @@ second = "Second"
 pdb.set_trace()
 result = first + second
 ```
+## Random
+```python
+from random import choice
+
+pickOne = random.choice(["banana","apple","grape"])
+shuffle = random.shuffle(["banana","apple","grape"])
+```
