@@ -26,6 +26,8 @@ Em contanste evolução.
 - [Tuples](./python/tuples.md)
 - [Strings](./python/strings.md)
 - [Functions](./python/functions.md)
+- [Built-in Functions](./python/built-in_functions.md)
+- [Lambdas](./python/lambdas.md)
 - [Flask](./python/flask.md)
 
 ## Cloud
