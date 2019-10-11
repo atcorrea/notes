@@ -45,75 +45,20 @@ class Deck:
             number = current_deck_count
 
         cards = []
-        for _ in range(number):
-            card = self.cards[-1]
-            self.cards.remove(card)
-            cards.append(card)
+        cards = self.cards[-number:]
+        self.cards = self.cards[:-number]
 
         return cards
     
     def _load_default_deck(self):
         cards = []
 
-        #Hearts        
-        cards.append(Card("Hearts", "A"))
-        cards.append(Card("Hearts", "2"))
-        cards.append(Card("Hearts", "3"))
-        cards.append(Card("Hearts", "4"))
-        cards.append(Card("Hearts", "5"))
-        cards.append(Card("Hearts", "6"))
-        cards.append(Card("Hearts", "7"))
-        cards.append(Card("Hearts", "8"))
-        cards.append(Card("Hearts", "9"))
-        cards.append(Card("Hearts", "10"))
-        cards.append(Card("Hearts", "J"))
-        cards.append(Card("Hearts", "Q"))
-        cards.append(Card("Hearts", "K"))
+        suits = ['Hearts', 'Spades', 'Diamonds', 'Cubs']
+        values = ['A', '2','3','4','5','6','7','8','9','10','J','Q','K']
 
-        #Spades
-        cards.append(Card("Spades", "A"))
-        cards.append(Card("Spades", "2"))
-        cards.append(Card("Spades", "3"))
-        cards.append(Card("Spades", "4"))
-        cards.append(Card("Spades", "5"))
-        cards.append(Card("Spades", "6"))
-        cards.append(Card("Spades", "7"))
-        cards.append(Card("Spades", "8"))
-        cards.append(Card("Spades", "9"))
-        cards.append(Card("Spades", "10"))
-        cards.append(Card("Spades", "J"))
-        cards.append(Card("Spades", "Q"))
-        cards.append(Card("Spades", "K"))
-
-        #Cubs
-        cards.append(Card("Cubs", "A"))
-        cards.append(Card("Cubs", "2"))
-        cards.append(Card("Cubs", "3"))
-        cards.append(Card("Cubs", "4"))
-        cards.append(Card("Cubs", "5"))
-        cards.append(Card("Cubs", "6"))
-        cards.append(Card("Cubs", "7"))
-        cards.append(Card("Cubs", "8"))
-        cards.append(Card("Cubs", "9"))
-        cards.append(Card("Cubs", "10"))
-        cards.append(Card("Cubs", "J"))
-        cards.append(Card("Cubs", "Q"))
-        cards.append(Card("Cubs", "K"))
-
-        #Diamonds
-        cards.append(Card("Diamonds", "A"))
-        cards.append(Card("Diamonds", "2"))
-        cards.append(Card("Diamonds", "3"))
-        cards.append(Card("Diamonds", "4"))
-        cards.append(Card("Diamonds", "5"))
-        cards.append(Card("Diamonds", "6"))
-        cards.append(Card("Diamonds", "7"))
-        cards.append(Card("Diamonds", "8"))
-        cards.append(Card("Diamonds", "9"))
-        cards.append(Card("Diamonds", "10"))
-        cards.append(Card("Diamonds", "J"))
-        cards.append(Card("Diamonds", "Q"))
-        cards.append(Card("Diamonds", "K"))
+        for suit in suits:
+            for value in values:
+                cards.append(Card(suit, value))
 
         return cards
 
