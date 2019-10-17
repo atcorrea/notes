@@ -81,3 +81,10 @@ interleave('hi', 'ha') # returns 'hhia'
 interleave('aaa', 'zzz') # returns 'azazaz'
 interleave('lzr', 'iad') # returns 'lizard'
 ```
+
+## Isinstace
+Verifica se um objeto é uma instância do tipo informado
+```python
+x = isinstance(5, int) #True
+x = isinstance('5', int) #False
+```
