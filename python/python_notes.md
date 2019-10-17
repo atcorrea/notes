@@ -72,3 +72,33 @@ from random import choice
 pickOne = random.choice(["banana","apple","grape"])
 shuffle = random.shuffle(["banana","apple","grape"])
 ```
+
+## Iterator
+- o método **iter(object)** retorna um iterator de um iterável (iterable)
+- consegue andar um um iterável utilizanto o **.next()**
+- Para um objeto ser um iterable ele deve implementar os métodos **\_\_iter\_\_** e **\_\next\_\_** 
+```python
+class Counter:
+	def __init__(self, low, high):
+		self.current = low
+		self.high = high
+
+	def __iter__(self):
+		return self
+
+	def __next__(self):
+		if self.current < self.high:
+			num = self.current
+			self.current += 1
+			return num
+		raise StopIteration
+
+
+for x in Counter(50,70):
+	print(x)
+```
+
+## Generator
+- É uma subclasse de iterator
+- utiliza a keyword **yield**
+- utilizável através da função next(generator)

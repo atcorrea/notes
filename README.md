@@ -29,6 +29,7 @@ Em contanste evolução.
 - [Built-in Functions](./python/built-in_functions.md)
 - [Lambdas](./python/lambdas.md)
 - [Exceptions](./python/exceptions.md)
+- [Generators](./python/generators.md)
 - [(OOP) Object Oriented Programming](./python/oop.md)
 - [Flask](./python/flask.md)
 
