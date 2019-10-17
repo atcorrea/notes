@@ -30,6 +30,7 @@ Em contanste evolução.
 - [Lambdas](./python/lambdas.md)
 - [Exceptions](./python/exceptions.md)
 - [Generators](./python/generators.md)
+- [Decorators](./python/decorators.md)
 - [(OOP) Object Oriented Programming](./python/oop.md)
 - [Flask](./python/flask.md)
 
