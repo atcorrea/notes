@@ -32,6 +32,7 @@ Em contanste evolução.
 - [Generators](./python/generators.md)
 - [Decorators](./python/decorators.md)
 - [Testing](./python/testing.md)
+- [I/O](./python/io.md)
 - [(OOP) Object Oriented Programming](./python/oop.md)
 - [Flask](./python/flask.md)
 
