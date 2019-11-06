@@ -141,15 +141,46 @@ if (list.size !in list.indices) {
 ```
 
 ## Construtores
-- O construtor é declarado junto com a classe.
+- O construtor é declarado junto com a classe, recebendo as propriedades
+- para executar código no momento da criação do objeto, utiliza-se a keyword **init**
 ```java
 class Player(val name:String, var level: Int = 1){
-    //...
+    init {
+        level += 4
+    }
 }
+
+var player = Player("l1nk")
 ```
 - **Não é necessário o uso de new** para declarar objetos
 
+## Herança
+- Por padrão classes e metodos não podem ser herdados
+- Utiliza a keyword **open** para tornar as classes herdáveis
+- mesmo se a classe for **open** os métodos ainda precisam da notação **open** para serem sobrescritos.
+- Métodos precisam da notação **override** para sobrescrever a implementação herdada
+```java
+open class Animal(val name: String, val numberOfLegs: Int) {
+    open fun move(distance: Int){
+        //...
+    }
+}
+```
+- Notação para herança:
+```java
+class Bird(val name: String, val numberOfLegs: Int = 2) : Animal(name, numberOfLegs) {
+    override fun move(distance: Int) {
+        this.fly(distance)
+    }
+
+    fun fly(distance: Int) {
+        //...
+    }
+}
+```
+
 ## Mais
+- Todas as classes herdam de **Any**
 - Não precisa de ; no final das linhas
 - Puxa conceitos da programação funcional e pode ser usado com sintaxe similar ao LINQ
 ```java
