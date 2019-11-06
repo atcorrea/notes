@@ -98,6 +98,7 @@ val inventory = ArrayList<String>()
 - existem palavras chave que representam a forma de andar nos ranges, (until, downTo, step)
 - **until** não inclui o último número
 - **step** só aceita valores positivos, para contagem negativa usar **downTo**
+- **while** é igual em outras linguagens (possui **break** , **continue**, e existe o **do while**)
 - **Exemplos:**
 ```java
 for(val in values) {
