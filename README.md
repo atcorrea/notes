@@ -39,3 +39,12 @@ Em contanste evolução.
 ## Cloud
 - [AWS](./Cloud/aws.md)
 - [S3](./Cloud/s3.md)
+
+## Android
+- [Sobre Android](./Android/android.md)
+
+## Java
+- [Sobre Gradle](./Java/Gradle/gradle_notes.md)
+
+## Kotlin
+- [Sobre Kotlin](./Kotlin/kotlin.md)
