@@ -10,6 +10,29 @@
 - Este arquivo fica dentro da pasta **resources**, permitindo seu acesso programaticamente
 - Para acessar os resources, você utiliza a classe **R**, que é gerada automaticamente pela IDE. (não deve ser modificada)
 - Normalmente acompanhadas de um arquivo Java ou kotlin para execução (meio que um code behind)
+- Toda atividade possui um ciclo, um processo de eventos que são executados ao longo da vida da atividade, o ciclo é conforme a imagem:
+
+![Acitivity Life Cycle](./imgs/acivitylifecycle.png)
+- no método **onCreate** é obrigatória a chamada de **super.onCreate()**, caso contrário, uma exception será lançada
+
+## Bundle
+- Objeto que armazena o estado da aplicação.
+- Serve para transferir informações entre as activities
+- você utiliza os ciclos **onSaveInstanceState** para salvar informações e **onRestoreInstanceState** para recuperar informações.
+- Funciona basicamente como uma sessão no navegador, onde é possível passar informações através de cache (chave-valor) entre telas
+- Exemplos:
+```java
+//salvando estado da aplicação
+override fun onSaveInstanceState(outState: Bundle?) {
+    outState?.putString(key, value)
+}
+
+//recuperando estado da aplicação
+override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+    savedInstanceState?.getString(key, defaultvalue)
+}
+
+```
 
 ## Layouts
 - Constraint layout é baseado no conceito de constraints
