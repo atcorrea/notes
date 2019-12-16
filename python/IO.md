@@ -14,6 +14,15 @@ file = open("new.txt", "w")
 - utilizando with() os recursos são dispensados automaticamente. (é a mesma coisa que o using do C#)
 - por trás dos panos, ele utiliza os dunders __enter()__ e __exit()__ para executar as operações de abertura e fechamento
 
+## With Statement Usage
+Opening a file using with is as simple as: with open(filename) as file:
+
+```python
+with open("welcome.txt") as file: # Use file to refer to the file object
+   data = file.read()
+   # ...do something with data
+```
+
 ## Métodos
 |Nome|Função|
 |----|------|
