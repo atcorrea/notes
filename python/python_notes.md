@@ -102,3 +102,6 @@ for x in Counter(50,70):
 - É uma subclasse de iterator
 - utiliza a keyword **yield**
 - utilizável através da função next(generator)
+
+## Recuperando número ASCII de um caractere
+- ord('a') # 97
