@@ -111,6 +111,17 @@ OK
 127.0.0.1:6379> HDEL myhash field2 
 (integer) 1
 ```
+- Nao é possivel apagar varios registros com pattern, para isso, consegui utilizar um comando no unix que utiliza XARGS para tal finalidade
+- **redis-cli --scan --pattern {pattern}** : faz uma busca pelas chaves que atendem determinado padrão
+- **xargs -t -I** : xargs é um comando do unix que executa um comando para cada registro encontrado no primeiro pipe
+    - -t -> exibe o comando ao executa-lo
+    - -I -> permite que você escreva um script e use % como placeholder para os argumentos do xargs
+- **sh -c 'redis-cli del  "%" '**:
+    - % sh -c -> é o início do script
+    - redis-cli del % -> é o comando de fato a ser executado multiplas vezes, (% é o caracter placeholder)
+```
+$ redis-cli --scan --pattern mte:ptbr:* | xargs -t -I % sh -c 'redis-cli del  "%" '
+```
 
 ## List of HMAP commands:
 |Comando                         |  Função   |
