@@ -34,3 +34,47 @@ with open("welcome.txt") as file: # Use file to refer to the file object
 |**file.close()**|fecha o arquivo, liberando recursos do computador|
 |**file.write(<string>)**|Adiciona texto à um arquivo|
 
+## Reading CSV
+### read normal
+```python
+import csv
+
+with open('employee_birthday.txt') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            print(f'Column names are {", ".join(row)}')
+            line_count += 1
+        else:
+            print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
+            line_count += 1
+    print(f'Processed {line_count} lines.')
+ ```
+ 
+ ### read as dict
+ - The first line of the CSV file is assumed to contain the keys to use to build the dictionary. If you don’t have these in your CSV file, you should specify your own keys by setting the fieldnames optional parameter to a list containing them.
+```python
+import csv
+
+with open('employee_birthday.txt', mode='r') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            print(f'Column names are {", ".join(row)}')
+            line_count += 1
+        print(f'\t{row["name"]} works in the {row["department"]} department, and was born in {row["birthday month"]}.')
+        line_count += 1
+    print(f'Processed {line_count} lines.')
+```
+### writting csv
+```python
+import csv
+
+with open('employee_file.csv', mode='w') as employee_file:
+    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+    employee_writer.writerow(['John Smith', 'Accounting', 'November'])
+    employee_writer.writerow(['Erica Meyers', 'IT', 'March'])
+```
