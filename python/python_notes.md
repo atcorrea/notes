@@ -105,3 +105,9 @@ for x in Counter(50,70):
 
 ## Recuperando número ASCII de um caractere
 - ord('a') # 97
+
+## Pegando o alfabeto
+```python
+import string
+print(string.ascii_lowercase)
+```
