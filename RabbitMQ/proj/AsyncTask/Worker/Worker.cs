@@ -15,7 +15,13 @@ namespace Worker
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "task_queue", durable: false, exclusive: false, autoDelete: false, arguments: null);
+                    channel.QueueDeclare(queue: "task_queue", 
+                                        durable: true, //--> persists queue even when rabbitmq dies 
+                                        exclusive: false, 
+                                        autoDelete: false, 
+                                        arguments: null);
+                    
+                    channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false); //each consumer can only process 1 message at a time
 
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) => {
@@ -27,9 +33,13 @@ namespace Worker
                         Thread.Sleep(dots * 1000);
 
                         Console.WriteLine("[X] Done");
+
+                        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
                     };
 
-                    channel.BasicConsume(queue: "task_queue", autoAck: true, consumer: consumer);     
+                    channel.BasicConsume(queue: "task_queue", 
+                                        autoAck: false, //--> ack = acknowledgement (prevents message to be lost before finished beeing processed) 
+                                        consumer: consumer);     
 
                     Console.WriteLine("[*] Waiting for messages. To exit press CTRL+C");
                     Console.ReadKey();               

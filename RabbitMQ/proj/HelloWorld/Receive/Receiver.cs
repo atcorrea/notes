@@ -10,13 +10,16 @@ namespace Receive
     {
         static void Main(string[] args)
         {
+            //opening connection
             var factory = new ConnectionFactory() {HostName = "localhost"};
             using (var connection = factory.CreateConnection())
             {
                 using (var channel = connection.CreateModel())
                 {
+                    //declaring queue
                     channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
+                    //creating handler for message received
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) => {
                         var body = ea.Body.ToArray();
@@ -24,6 +27,7 @@ namespace Receive
                         Console.WriteLine($"[X] received {message}");
                     };
 
+                    //consuming messages (handler adding)
                     channel.BasicConsume(queue: "hello", autoAck: true, consumer: consumer);     
 
                     Console.WriteLine("Press a key to exit");
