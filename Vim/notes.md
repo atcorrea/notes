@@ -36,8 +36,8 @@
 - **yy** => Copia a linha atual 
 - **Y** => Copia a linha atual 
 - **dd** => recorta a linha atual 
-- **p** => Cola da área de transferência do yank (y) 
-- **ec** => apaga a palavra e começa a inserção 
+- **p** => Cola da área de transferência do VIM (pego com y ou d)
+- **cw** => apaga a palavra e começa a inserção 
 - **s** => apaga caracter e começa inserção
 - **S** => apaga a linha e começa a inserção 
 - **cc** => apaga a linha e começa a inserção 
@@ -58,9 +58,9 @@
 
 ## Comandos
 - **.** => refaz a ultima ação 
-- **w** => salva o arquivo 
-- **q** => fecha o arquivo
-- **e** => abre outro arquivo para edição 
+- **:w** => salva o arquivo 
+- **:q** => fecha o arquivo
+- **:e** => abre outro arquivo para edição 
 - **ZZ** => mesma coisa que wq 
 - adicionar ! no final para forçar o comando (ex: q! para sair sem salvar) 
 - **:split** => divide em dois paineis 
