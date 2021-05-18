@@ -11,32 +11,45 @@
 - **G** => Ir para o final do arquivo
 - **0** => Vai para o início da linha (desconsidera identação) 
 - **w** => Avança uma palavra 
-- **b** => Volta uma palavra 
+- **W** => Avança uma palavra (ignora .)
+- **b** => Vai para o inicio da palavra 
+- **e** => Vai para o final da palavra 
 - **/** => Busca para baixo no arquivo
 - **?** => Busca para cima no arquivo
 - **ctrl + f** => semelhante ao page down 
 - **ctrl + b** => semelhante ao page up 
+- **H** => Primeira linha a vista 
+- **L** => Ultima linha a vista 
+- **{n}G** => Vai ate a {n} linha 
+- **%** => vai até o fechamento do escopo **) ou }**
 
 ## Edição
 - **i** => Entra no modo de inserção 
 - **I** => Entra no modo de inserção no início da linha
-- **a** => Entra em inserção no caracter seguinte 
+- **A** => Entra no modo de inserção no final da linha
+- **a** => Entra em inserção no caracter seguinte (append)
 - **x** => Apaga um caracter (delete) 
 - **X** => Apaga um caracter (backspace) 
 - **r** => Substitui um caracter 
 - **o** => Começa a digitar na linha de baixo 
 - **O** => Começa a digitar na linha de cima 
 - **yy** => Copia a linha atual 
+- **Y** => Copia a linha atual 
 - **dd** => recorta a linha atual 
 - **p** => Cola da área de transferência do yank (y) 
 - **ec** => apaga a palavra e começa a inserção 
+- **s** => apaga caracter e começa inserção
 - **S** => apaga a linha e começa a inserção 
+- **cc** => apaga a linha e começa a inserção 
+- **C** => apaga counteudo da linha após o cursos e entra em inserção (similar a d$)
 - **u** => desfaz ultima alteração 
 - **ctrl + R** => refaz ultima alteração 
 - **dgg** => apaga da linha atual até o final do arquivo 
 - **dG** => apaga da linha atual até o inicio do arquivo 
 - **d{n}** => apaga n linhas a partir da linha atual 
-- **d$** => apaga até o final da linha 
+- **d$** => apaga da posição do cursor até o final da linha
+- **D** => apaga da posição do cursor até o final da linha 
+- **J** => junta linha de baixo no final da atual
 
 ## Visual Mode
 - **v** => entra em modo visual (seleção) 
