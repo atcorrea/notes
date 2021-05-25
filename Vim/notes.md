@@ -68,3 +68,8 @@
 - **:set ai** => auto ident 
 - **:set ic** => ignore case 
 - **:%s/{palavraantiga}/{palavranova}/g** => faz subistituição das palavras 
+
+## Cool Plugins
+- NERDTree
+- Surround (https://github.com/tpope/vim-surround)
+- Sneak (https://github.com/justinmk/vim-sneak)
