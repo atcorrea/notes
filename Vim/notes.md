@@ -16,12 +16,14 @@
 - **e** => Vai para o final da palavra 
 - **/** => Busca para baixo no arquivo
 - **?** => Busca para cima no arquivo
-- **ctrl + f** => semelhante ao page down 
-- **ctrl + b** => semelhante ao page up 
 - **H** => Primeira linha a vista 
 - **L** => Ultima linha a vista 
 - **{n}G** => Vai ate a {n} linha 
 - **%** => vai até o fechamento do escopo **) ou }**
+- **ctrl + u** => page up (meia tela)
+- **ctrl + d** => page down (meia tela)
+- **ctrl + f** => page down (tela inteira)
+- **ctrl + b** => page up (tela inteira)
 
 ## Edição
 - **i** => Entra no modo de inserção 
@@ -41,7 +43,7 @@
 - **s** => apaga caracter e começa inserção
 - **S** => apaga a linha e começa a inserção 
 - **cc** => apaga a linha e começa a inserção 
-- **C** => apaga counteudo da linha após o cursos e entra em inserção (similar a d$)
+- **C** => apaga counteudo da linha após o cursor e entra em inserção (similar a d$)
 - **u** => desfaz ultima alteração 
 - **ctrl + R** => refaz ultima alteração 
 - **dgg** => apaga da linha atual até o final do arquivo 
@@ -58,11 +60,11 @@
 - **V** => Visual mode linhas (seleção de linhas) 
 
 ## Comandos
+- **ZZ** => mesma coisa que wq 
 - **.** => refaz a ultima ação 
 - **:w** => salva o arquivo 
 - **:q** => fecha o arquivo
 - **:e** => abre outro arquivo para edição 
-- **ZZ** => mesma coisa que wq 
 - adicionar ! no final para forçar o comando (ex: q! para sair sem salvar) 
 - **:split** => divide em dois paineis 
 - **:set number** => Exibe os números das linhas 
