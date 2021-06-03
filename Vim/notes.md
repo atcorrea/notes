@@ -50,6 +50,7 @@
 - **d$** => apaga da posição do cursor até o final da linha
 - **D** => apaga da posição do cursor até o final da linha 
 - **J** => junta linha de baixo no final da atual
+- **di<"|'|)|}> => deleta tudo até o caracter especificado (bom para apagar tudo dentro de uma string por exemplo)
 
 ## Visual Mode
 - **v** => entra em modo visual (seleção) 
