@@ -24,6 +24,7 @@
 - **ctrl + d** => page down (meia tela)
 - **ctrl + f** => page down (tela inteira)
 - **ctrl + b** => page up (tela inteira)
+- **<leader>/busca** => executa um comando (c, d, y) até a busca. / é pesquisa para baixo e ? pesquisa para cima.
 
 ## Edição
 - **i** => Entra no modo de inserção 
