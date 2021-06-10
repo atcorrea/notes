@@ -48,3 +48,12 @@ Em contanste evolução.
 
 ## Kotlin
 - [Sobre Kotlin](./Kotlin/kotlin.md)
+
+## VIM
+- [Sobre VIM](./Vim/notes.md)
+
+## Unix
+- [Sobre Unix](./Unix/commands.md)
+
+## K8s
+- [Sobre Kubernetes](./Docker & Kubernetes/Kubernetes.md)
