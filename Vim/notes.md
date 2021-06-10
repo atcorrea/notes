@@ -24,7 +24,7 @@
 - **ctrl + d** => page down (meia tela)
 - **ctrl + f** => page down (tela inteira)
 - **ctrl + b** => page up (tela inteira)
-- **<leader>/busca** => executa um comando (c, d, y) até a busca. / é pesquisa para baixo e ? pesquisa para cima.
+- **<leader>/busca** => executa um comando (ex: c, d, y) até a busca. / é pesquisa para baixo e ? pesquisa para cima.
 
 ## Edição
 - **i** => Entra no modo de inserção 
@@ -74,6 +74,7 @@
 - **:%s/{palavraantiga}/{palavranova}/g** => faz subistituição das palavras 
 
 ## Cool Plugins
-- NERDTree
+- NERDTree (https://github.com/preservim/nerdtree)
 - Surround (https://github.com/tpope/vim-surround)
 - Sneak (https://github.com/justinmk/vim-sneak)
+- EasyMotion (https://github.com/easymotion/vim-easymotion)
