@@ -1,22 +1,10 @@
-# Anotações, Cheatsheets, etc.
-Repositório contendo anotações de estudos, e algumas cheatsheets.
+# Anota��es, Cheatsheets, etc.
+Reposit�rio contendo anota�oes de estudos, e algumas cheatsheets.
 
-Em contanste evolução.
+# Sum�rio:
 
-# Sumário:
-
-### NoSQL
-- [MongoDB](./Nosql/Mongodb/mongo.md)
-- [Riak](./Nosql/KeyValue/riak.md)
-
-## Big Data
-- [Hadoop](./BigData/Hadoop.md)
-- [Spark](./BigData/Spark.md)
-- [Run Time Complexity (big O)](./BigData/runTimeComplexity.md)
-
-## Machine Learning
-- [K-Means](./MachineLearning/kMeans.md)
-- [Linear Regression](./MachineLearning/linear_regression.md)
+## VIM
+- [Sobre VIM](./Vim/notes.md)
 
 ## Python
 - [Python Tips](./python/python_notes.md)
@@ -36,6 +24,19 @@ Em contanste evolução.
 - [(OOP) Object Oriented Programming](./python/oop.md)
 - [Flask](./python/flask.md)
 
+### NoSQL
+- [MongoDB](./Nosql/Mongodb/mongo.md)
+- [Riak](./Nosql/KeyValue/riak.md)
+
+## Big Data
+- [Hadoop](./BigData/Hadoop.md)
+- [Spark](./BigData/Spark.md)
+- [Run Time Complexity (big O)](./BigData/runTimeComplexity.md)
+
+## Machine Learning
+- [K-Means](./MachineLearning/kMeans.md)
+- [Linear Regression](./MachineLearning/linear_regression.md)
+
 ## Cloud
 - [AWS](./Cloud/aws.md)
 - [S3](./Cloud/s3.md)
@@ -49,11 +50,8 @@ Em contanste evolução.
 ## Kotlin
 - [Sobre Kotlin](./Kotlin/kotlin.md)
 
-## VIM
-- [Sobre VIM](./Vim/notes.md)
-
 ## Unix
 - [Sobre Unix](./Unix/commands.md)
 
 ## K8s
-- [Sobre Kubernetes](./Docker & Kubernetes/Kubernetes.md)
+- [Sobre Kubernetes](./Docker_&_Kubernetes/Kubernetes.md)
