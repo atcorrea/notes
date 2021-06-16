@@ -25,3 +25,8 @@ docker rm -f <ID>
 docker login
 docker push <imagem>
 ```
+
+```dockerfile
+# mantem container rodando sem processo
+CMD tail -f /dev/null
+```
