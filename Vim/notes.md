@@ -72,9 +72,9 @@
 - **:set ai** => auto ident 
 - **:set ic** => ignore case 
 - **:{n}s/{palavraantiga}/{palavranova}/g** => faz subistituição das palavras 
-	>> s é o comando 'substitute' e o **n** é o range para aplicar a substituição. Ex. ```:1-10s``` aplica o comando da linha 1 até a linha 10. Podemos utilizar o **%** para aplicar no arquivo todo.
+	> s é o comando 'substitute' e o **n** é o range para aplicar a substituição. Ex. ```:1-10s``` aplica o comando da linha 1 até a linha 10. Podemos utilizar o **%** para aplicar no arquivo todo.
 - **:g/pattern/d** => remove linhas que tem determinado padrão
-	>> :g! para negativa do pattern
+	> :g! para negativa do pattern
 
 ## Cool Plugins
 - NERDTree (https://github.com/preservim/nerdtree)
@@ -83,7 +83,8 @@
 - EasyMotion (https://github.com/easymotion/vim-easymotion)
 
 ## Surround Plugin
-- **cs{old}{new}** => troca caracter em volta de palavras. Ex. trocar **"palavras a"** por **'palavras a'**.
+- **cs{old}{new}** => troca caracter em volta de palavras. Ex. trocar ```"palavras a"``` por ```'palavras a'```.
 	> pode se usar t para identificar tag xml ou html.
-- **ds{char}** => exclui caracter em volta das palavras. Ex. trocar **"palavras a"** por **palavras a**.
-- **ysw{char}** => adiciona caracter em volta de palavras. Ex. trocar **palavras a** por **"palavras a"**
+- **ds{char}** => exclui caracter em volta das palavras. Ex. trocar ```"palavras a"``` por ```palavras a```.  
+- **ysw{char}** => adiciona caracter em volta de palavras. Ex. trocar ```palavras a``` por ```"palavras a"```.
+
