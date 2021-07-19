@@ -25,6 +25,8 @@
 - **ctrl + f** => page down (tela inteira)
 - **ctrl + b** => page up (tela inteira)
 - **<leader>/busca** => executa um comando (ex: c, d, y) até a busca. / é pesquisa para baixo e ? pesquisa para cima.
+- **m{tecla}** => marca um ponto no arquivo a uma letra. ex.  ```m1``` marca a linha na tecla ```1```.
+- **'{tecla}** => vai até o ponto marcado com o comando m. ex ```'1``` vai até o ponto marcado com ```m1```.
 
 ## Edição
 - **i** => Entra no modo de inserção 
@@ -61,6 +63,7 @@
 - **V** => Visual mode linhas (seleção de linhas) 
 
 ## Comandos
+- **:h {tecla}** => mostra ajuda para comando associados aquela tecla
 - **ZZ** => mesma coisa que wq 
 - **.** => refaz a ultima ação 
 - **:w** => salva o arquivo 
