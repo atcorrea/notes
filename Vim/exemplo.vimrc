@@ -1,7 +1,7 @@
 exemplo de como instalar plugins: https://stackoverflow.com/questions/18050924/how-to-install-plugins-for-vim/18051764
 
 set relativenumber
-" set cursorline
+set cursorline
 set t_Co=256 "força o terminal a usar 256 cores
 set autoindent
 set hlsearch
@@ -52,20 +52,32 @@ nmap F <Plug>Sneak_S
 
 " NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeMapActivateNode='l'
+nmap <silent> <F1> :NERDTreeToggle<CR>
+nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16'
+let g:airline_theme = 'badwolf'
 
 " maps
-nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <leader>o o<Esc>k
 nmap <leader>O O<Esc>j
 nmap <CR> o<ESC>
-nmap <C-CR> O<ESC>
-nmap <C-\> :vsplit<CR>
-nmap <C-z> :split<CR>
-nmap <C-L> <C-W><C-L>
-nmap <C-H> <C-W><C-H>
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
+nmap <S-CR> O<ESC>
+
+"" splits
+nmap <C-\> <C-W><C-V> 
+nmap \- <C-W><C-S> 
+nmap <C-l> <C-W><C-L>
+nmap <C-h> <C-W><C-H>
+nmap <C-j> <C-W><C-J>
+nmap <C-k> <C-W><C-K>
+nmap <C-x> <C-W><C-Q>
+
+"" tabs
+nmap <Tab>' :tabnew<CR>
+nmap <Tab>l :tabnext<CR>
+nmap <Tab>h :tabprev<CR>
+nmap <Tab><Esc> :tabclose<CR>
