@@ -56,6 +56,10 @@
 - **D** => apaga da posição do cursor até o final da linha 
 - **J** => junta linha de baixo no final da atual
 - **di<"|'|)|}> => deleta tudo até o caracter especificado (bom para apagar tudo dentro de uma string por exemplo)
+- **{n}=** => corrige endentação para um numero informado de linhas
+	> gg=G formataria o arquivo inteiro
+	> == formata somente a linha atual
+	> =% formata até o final do método
 
 ## Visual Mode
 - **v** => entra em modo visual (seleção) 
