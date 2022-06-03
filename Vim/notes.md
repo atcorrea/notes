@@ -1,17 +1,17 @@
 # VIM
 
-## Navegação
+## NavegaÃ§Ã£o
 - **$** => Ir para o final da linha
 - **h** => Vai para esquerda 
 - **j** => Vai para baixo 
 - **k** => Vai para cima 
 - **l** => Vai para direita 
-- **^** => Ir para o início da linha 
-- **gg** => Ir para início da arquivo 
+- **^** => Ir para o inicio da linha 
+- **gg** => Ir para inicio da arquivo 
 - **G** => Ir para o final do arquivo
-- **0** => Vai para o início da linha (desconsidera identação) 
-- **w** => Avança uma palavra 
-- **W** => Avança uma palavra (ignora .)
+- **0** => Vai para o inicio da linha (desconsidera identaÃ§Ã£o) 
+- **w** => AvanÃ§a uma palavra 
+- **W** => AvanÃ§a uma palavra (ignora .)
 - **b** => Vai para o inicio da palavra 
 - **e** => Vai para o final da palavra 
 - **/** => Busca para baixo no arquivo
@@ -19,69 +19,80 @@
 - **H** => Primeira linha a vista 
 - **L** => Ultima linha a vista 
 - **{n}G** => Vai ate a {n} linha 
-- **%** => vai até o fechamento do escopo **) ou }**
+- **%** => vai atÃ© o fechamento do escopo **) ou }**
 - **ctrl + u** => page up (meia tela)
 - **ctrl + d** => page down (meia tela)
 - **ctrl + f** => page down (tela inteira)
 - **ctrl + b** => page up (tela inteira)
-- **<leader>/busca** => executa um comando (ex: c, d, y) até a busca. / é pesquisa para baixo e ? pesquisa para cima.
+- **<leader>/busca** => executa um comando (ex: c, d, y) atÃ© a busca. / pesquisa para baixo e ? pesquisa para cima.
 - **m{tecla}** => marca um ponto no arquivo a uma letra. ex.  ```m1``` marca a linha na tecla ```1```.
-- **'{tecla}** => vai até o ponto marcado com o comando m. ex ```'1``` vai até o ponto marcado com ```m1```.
+- **'{tecla}** => vai atÃ© o ponto marcado com o comando m. ex ```'1``` vai ate o ponto marcado com ```m1```.
 
-## Edição
-- **i** => Entra no modo de inserção 
-- **I** => Entra no modo de inserção no início da linha
-- **A** => Entra no modo de inserção no final da linha
-- **a** => Entra em inserção no caracter seguinte (append)
+## Busca
+- **\*** => busca ocorrencias da palavra que o cursor esta em cima
+
+## EdiÃ§Ã£o
+- **i** => Entra no modo de inseÃ§Ã£o 
+- **I** => Entra no modo de inseÃ§Ã£o no inÃ­cio da linha
+- **A** => Entra no modo de inserÃ§Ã£o no final da linha
+- **a** => Entra em inserÃ§Ã£o no caracter seguinte (append)
 - **x** => Apaga um caracter (delete) 
 - **X** => Apaga um caracter (backspace) 
 - **r** => Substitui um caracter 
-- **o** => Começa a digitar na linha de baixo 
-- **O** => Começa a digitar na linha de cima 
+- **o** => comeÃ§a a digitar na linha de baixo 
+- **O** => comeÃ§a a digitar na linha de cima 
 - **yy** => Copia a linha atual 
 - **Y** => Copia a linha atual 
 - **dd** => recorta a linha atual 
-- **p** => Cola da área de transferência do VIM (pego com y ou d)
-- **cw** => apaga a palavra e começa a inserção 
-- **s** => apaga caracter e começa inserção
-- **S** => apaga a linha e começa a inserção 
-- **cc** => apaga a linha e começa a inserção 
-- **C** => apaga counteudo da linha após o cursor e entra em inserção (similar a d$)
-- **u** => desfaz ultima alteração 
-- **ctrl + R** => refaz ultima alteração 
-- **dgg** => apaga da linha atual até o final do arquivo 
-- **dG** => apaga da linha atual até o inicio do arquivo 
+- **p** => Cola da Ã¡rea de transferÃªncia do VIM (pego com y ou d)
+- **cw** => apaga a palavra e comeÃ§a a inserÃ§Ã£o 
+- **s** => apaga caracter e comeÃ§a inserÃ§Ã£o
+- **S** => apaga a linha e comeÃ§a a inserÃ§Ã£o 
+- **cc** => apaga a linha e comeÃ§a a inserÃ§Ã£o 
+- **C** => apaga counteudo da linha apÃ³s o cursor e entra em inserÃ§Ã£o (similar a d$)
+- **u** => desfaz ultima alteraÃ§Ã£o 
+- **ctrl + R** => refaz ultima alteraÃ§Ã£o 
+- **dgg** => apaga da linha atual atÃ© o final do arquivo 
+- **dG** => apaga da linha atual atÃ© o inicio do arquivo 
 - **d{n}** => apaga n linhas a partir da linha atual 
-- **d$** => apaga da posição do cursor até o final da linha
-- **D** => apaga da posição do cursor até o final da linha 
+- **d$** => apaga da posiÃ§Ã£o do cursor atÃ© o final da linha
+- **D** => apaga da posiÃ§Ã£o do cursor atÃ© o final da linha 
 - **J** => junta linha de baixo no final da atual
-- **di<"|'|)|}> => deleta tudo até o caracter especificado (bom para apagar tudo dentro de uma string por exemplo)
-- **{n}=** => corrige endentação para um numero informado de linhas
+- **di<"|'|)|}> => deleta tudo atÃ© o caracter especificado (bom para apagar tudo dentro de uma string por exemplo)
+- **{n}=** => corrige identaÃ§Ã£o para um numero informado de linhas
 	> gg=G formataria o arquivo inteiro
 	> == formata somente a linha atual
-	> =% formata até o final do método
+	> =% formata atÃ© o final do mÃ©todo
 
 ## Visual Mode
-- **v** => entra em modo visual (seleção) 
-- **ctrl + v** => entra em visual block mode (seleção em coluna) 
-- **V** => Visual mode linhas (seleção de linhas) 
+- **v** => entra em modo visual (seleÃ§Ã£o) 
+- **ctrl + v** => entra em visual block mode (seleÃ§Ã£o em coluna) 
+- **V** => Visual mode linhas (seleÃ§Ã£o de linhas) 
 
 ## Comandos
 - **:h {tecla}** => mostra ajuda para comando associados aquela tecla
 - **ZZ** => mesma coisa que wq 
-- **.** => refaz a ultima ação 
+- **.** => refaz a ultima aÃ§Ã£o 
 - **:w** => salva o arquivo 
 - **:q** => fecha o arquivo
-- **:e** => abre outro arquivo para edição 
-- adicionar ! no final para forçar o comando (ex: q! para sair sem salvar) 
+- **:e** => abre outro arquivo para ediÃ§Ã£o 
+- **:m {numero da linha}** => move a linha selecionada para o numero de linha solicitado
+- adicionar ! no final para forÃ§ar o comando (ex: q! para sair sem salvar) 
 - **:split** => divide em dois paineis 
-- **:set number** => Exibe os números das linhas 
+- **:set number** => Exibe os nÃºmeros das linhas 
 - **:set ai** => auto ident 
 - **:set ic** => ignore case 
-- **:{n}s/{palavraantiga}/{palavranova}/g** => faz subistituição das palavras 
-	> s é o comando 'substitute' e o **n** é o range para aplicar a substituição. Ex. ```:1-10s``` aplica o comando da linha 1 até a linha 10. Podemos utilizar o **%** para aplicar no arquivo todo.
-- **:g/pattern/d** => remove linhas que tem determinado padrão
-	> :g! para negativa do pattern
+- **:{n}s/{palavraantiga}/{palavranova}/g** => faz substituiÃ§Ã£o das palavras 
+	> s Ã© o comando 'substitute' e o **n** Ã© o range para aplicar a substituÃ§Ã£o. Ex. ```:1-10s``` aplica o comando da linha 1 atÃ© a linha 10. Podemos utilizar o **%** para aplicar no arquivo todo.
+- **:g/pattern/d** => remove linhas que tem determinado padrÃ£o
+	> :g! para negativa do pattern (:v tambÃ©m faz o mesmo)
+- **:v/pattern/d** => remove linhas que nÃ£o tem determinado padrÃ£o
+- **:sort** => organiza as linhas selecionadas em ordem alfabetica
+- **:g/{pattern}/:{comando}** => executa o determinado comando para o padrÃ£o selecionado
+
+## CombinaÃ§Ãµes bacanas
+- :g/^/m 0 => troca as linhas do arquivo.
+- :g/{pattern}/normal {@macro} => executa a macro nas linhas com o padrÃ£o selecionado
 
 ## Cool Plugins
 - NERDTree (https://github.com/preservim/nerdtree)
