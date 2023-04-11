@@ -63,11 +63,16 @@
 	> gg=G formataria o arquivo inteiro
 	> == formata somente a linha atual
 	> =% formata até o final do método
+- **~** => troca case dos caracteres selecionados
 
 ## Visual Mode
 - **v** => entra em modo visual (seleção) 
 - **ctrl + v** => entra em visual block mode (seleção em coluna) 
 - **V** => Visual mode linhas (seleção de linhas) 
+
+# Úteis
+- **Ctrl-a** => adiciona 1 no número selecionado
+- **Ctrl-x** => decrementa 1 no número selecionado
 
 ## Comandos
 - **:h {tecla}** => mostra ajuda para comando associados aquela tecla
@@ -93,6 +98,7 @@
 ## Combinações bacanas
 - :g/^/m 0 => troca as linhas do arquivo.
 - :g/{pattern}/normal {@macro} => executa a macro nas linhas com o padrão selecionado
+- Ctrl+Q, seleciona uma coluna de números, depois ```gg ctrl-a``` para incrementar cada número da coluna
 
 ## Cool Plugins
 - NERDTree (https://github.com/preservim/nerdtree)
