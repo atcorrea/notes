@@ -45,10 +45,23 @@ alguns exemplos de Service que ajudam nessas tarefas:
 
  ### NodePort
  Permite acesso externo a ips internos dentro do Cluster. NodePorts também funcionam como ClusterIPs.
- As portas de acesso externo são acima de 30000 até 32767.
+ As portas de acesso externo são acima de 30000 até 32767. Os Nodeports são compartilhados entre os nós do cluster.
 
  ### Load Balancer
  é um ClusterIP que permite uma maquina do mundo externo e os nossos pods, mas que se integra automaticamente aos load balancers de cloud providers. 
+
+ ### Config Maps
+ Dicionarios de chave valor que podem ser referenciados e compartilhados por diferentes pods.
+
+ ### Replica Sets
+ Estrutura que pode encapsular 1 ou mais pods. O Replica set pode criar novos pods caso um pod do set falhe. Por exemplo: se eu desejo 3 pods em um replica set e 1 falha, o set irá criar um novo no lugar deste.
+
+ ### Deployment
+ Camada acima do replicaset. Quando vc cria um deployment, vc cria um replicaset.
+ Permite controle de versão dos replicasets.
+
+ ### Volume
+ Volumes possuem ciclos de vida independentes dos containers. Porém são dependentes dos pods. O kubernetes suporta diversos tipos de volumes. um exemplo deles é o hostPath, que linka com uma pasta a um diretório do host.
 
 ## Comandos úteis:
 ------
@@ -65,6 +78,8 @@ kubectl get deployments
 kubectl get services
 # Para obter mais infos, em qualquer um dos comandos utilize a flag '-o wide'
 kubectl get pods -o wide
+# Listar configmaps
+kubectl get configmap
 ```
 
 **Detalhar algum recurso:**
@@ -74,7 +89,7 @@ kubectl describe [pods | nodes | deployments | services]
 kubectl describe pod <nome-do-pod>
 ```
 
-**Adicionar Arquivo no cluster:**
+**Adicionar Arquivo no cluster: (OLD)**
 ```bash
 # -f para FILE
  kubectl create -f .\deployment-aplicacao.yml
@@ -96,20 +111,36 @@ kubectl delete -f ./Exemplos/kubernetes-alura/primeiro-pod.yaml
 kubectl exec -it <nome-do-pod> -- bash
 ```
 
-**Deletar um pod:**
-```bash
- kubectl delete pods <nome-do-pod>
-```
+**Deletar um recurso:**
+Pode deletar pods, svcs, configmaps, etc
 Pode ser utilizado com a flag --all para deletar tudo de uma vez.
-
-**Deletar um serviço:**
 ```bash
- kubectl delete svc <nome-do-svc>
+ kubectl delete <recurso> <nome-do-pod>
 ```
-Pode ser utilizado com a flag --all para deletar tudo de uma vez.
 
-**Obter Url de um Service:**
+**Obter Url de um Service: (OLD)**
 ```bash
 # para o minikube
 minikube service <nome-do-service> --url
+```
+----
+### Deployments
+**Puxar o histórico de um deployment**
+```bash
+ kubectl rollout history deployment <nome-deployment>
+```
+
+**aplicando uma nova versão de um deployment**
+```bash
+ kubectl apply -f <nome-arquivo-deployment> --record
+```
+
+**trocando a mensagem de atualização de uma linha de histórico de deployment**
+```bash
+ kubectl annotate deployment <nome-deployment> kubernetes.io/change-cause="texto" 
+```
+
+**voltando o deployment a uma versão anterior**
+```bash
+ kubectl rollout undo deployment <nome-deployment> --to-revision=<numero>
 ```

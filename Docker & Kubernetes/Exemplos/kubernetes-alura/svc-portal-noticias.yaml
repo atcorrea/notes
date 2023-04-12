@@ -8,4 +8,6 @@ spec:
     app: portal
   ports:
     - port: 80
+      # targetPort: 80
+      # nodePorts de 30000 até 32767 (maximo de um short que sao 16 bits)
       nodePort: 30000
