@@ -10,12 +10,12 @@ spec:
         - mountPath: /volume-dentro-do-container
           name: primeiro-volume
     - name: jenkins-container
-      image: jenkins:alpine
+      image: jenkins/jenkins:alpine
       volumeMounts:
         - mountPath: /volume-dentro-do-container
           name: primeiro-volume
   volumes:
     - name: primeiro-volume
       hostPath:
-        path: ~/temp
+        path: /mnt/c/Users/andre.correa/temp        
         type: Directory

@@ -63,6 +63,18 @@ alguns exemplos de Service que ajudam nessas tarefas:
  ### Volume
  Volumes possuem ciclos de vida independentes dos containers. Porém são dependentes dos pods. O kubernetes suporta diversos tipos de volumes. um exemplo deles é o hostPath, que linka com uma pasta a um diretório do host.
 
+ ### Persistent Volume
+ Volumes configurados em cloud providers como o GKE por exemplo. O pod precisa de um PersistentVolumeClaim para acessar esse PersistentVolume.
+
+ ### Storage Classes
+Gerencia os discos em um cloud provider, cria e remove persistent volumes dinamicamente. Ao deletar a storage class do cluster, o disco é removido do cloud provider. Um cluster local de desenvolvimento possui um storage class padrão criado automaticamente com o cluster também.
+
+### Stateful Sets
+Funciona de maneira similar ao deployment, mas é para aplicações que possuem persistência. Utiliza o storage class padrão que o cluster sempre possui para atrelar os PVCs (persistentVolumeClaims) atrelados ao stateful set a um PV (persistent Volume).
+
+### Liveness Probe
+"Prova de vida" de uma aplicação dentro de um pod. É como o kubernetes sabe se precisa ou não reiniciar aquele pod. Normalmente aponta para um HealthCheck em uma aplicação para se saber se ela está OK.
+
 ## Comandos úteis:
 ------
 
