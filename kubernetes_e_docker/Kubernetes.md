@@ -78,6 +78,13 @@ Funciona de maneira similar ao deployment, mas é para aplicações que possuem 
 ### Readiness Probes
 Caso o pod seja reiniciado, pode ser que ele demore um pouco para estar pronto para receber requisições. Para isso podemos utilizar o readiness probe, que diz em quanto tempo o pod estará pronto para iniciar.
 
+### HPA (Horizontoal Pod Autoscaler)
+Recurso que consegue escalar o número de pods em um replicaset baseado no consumo de CPU.
+Necessita de um servidor de métricas do Kubernetes para funcionar (O rancher desktop sobe esse serviço por padrão).
+
+### Job
+Define politicas para execução de pods que não tem processos que rodam continuamente (como um db ou um servidor http). Para processos que são executados e encerrados (como uma atualização, um cálculo, etc.)
+
 
 ## Comandos úteis:
 ------
