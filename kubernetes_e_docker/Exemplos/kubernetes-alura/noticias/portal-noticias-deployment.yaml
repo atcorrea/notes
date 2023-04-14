@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: portal-noticias-deployment
+  namespace: app-noticias
 spec:
   template:
     metadata:

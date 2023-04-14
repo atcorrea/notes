@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db-noticias-deployment
+  namespace: app-noticias
 spec:
   # quando nao declara o numero de replicas, o padrao e 1
   template:

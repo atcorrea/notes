@@ -85,6 +85,9 @@ Necessita de um servidor de métricas do Kubernetes para funcionar (O rancher de
 ### Job
 Define politicas para execução de pods que não tem processos que rodam continuamente (como um db ou um servidor http). Para processos que são executados e encerrados (como uma atualização, um cálculo, etc.)
 
+### Namespaces
+forma de organizar logicamente recursos dentro de um cluster. Normalmente utilizado para clusters que sao compartilhados por muitos usuarios.
+
 
 ## Comandos úteis:
 ------
