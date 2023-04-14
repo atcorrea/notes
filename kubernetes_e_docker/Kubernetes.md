@@ -75,6 +75,10 @@ Funciona de maneira similar ao deployment, mas é para aplicações que possuem 
 ### Liveness Probe
 "Prova de vida" de uma aplicação dentro de um pod. É como o kubernetes sabe se precisa ou não reiniciar aquele pod. Normalmente aponta para um HealthCheck em uma aplicação para se saber se ela está OK.
 
+### Readiness Probes
+Caso o pod seja reiniciado, pode ser que ele demore um pouco para estar pronto para receber requisições. Para isso podemos utilizar o readiness probe, que diz em quanto tempo o pod estará pronto para iniciar.
+
+
 ## Comandos úteis:
 ------
 
