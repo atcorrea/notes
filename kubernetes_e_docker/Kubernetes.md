@@ -167,3 +167,15 @@ minikube service <nome-do-service> --url
 ```bash
  kubectl rollout undo deployment <nome-deployment> --to-revision=<numero>
 ```
+
+# Programas relacionados ao Kubernetes
+ - Helm
+    gerenciador de pacotes (charts no helm) dentro de um cluster kubernetes
+ - Rancher Desktop
+    aplicação que permite utilizar a CLI do docker e subir um cluster kubernetes (alternativa do docker desktop). Utiliza integração com wsl no windows.
+ - K3s
+    mini cluster para execução local que vem com o rancher desktop (similar ao minikube)
+ - kind
+    alternativa ao k3s ou minikube, utiliza containers docker para subir clusters com vários nós
+ - k9s
+    aplicação de terminal para visualização de um ou mais clusters kubernetes
